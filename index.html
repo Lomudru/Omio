@@ -11,46 +11,64 @@
 </head>
 <body>
     <main>
-        <form action="#">
-            <select name="traject-type" id="traject-type">
-                <option value="One-way">One-way</option>
-                <option value="Round-trip">Round Trip</option>
-            </select>
-            <div>
-                <p>1 Adult, No discound card</p>
-                <div>
-                    <p>Adult</p>
-                    <div id="less-adult"><i class="fa-solid fa-minus"></i></div>
-                    <p id="number-adult"></p>
-                    <div id="more-adult"><i class="fa-solid fa-plus"></i></div>
+        <div id="searchBar">
+            <form action="#">
+                <div class="advence-search">
+                    <div id="select">
+                        <p>One-way</p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <div id="select-option">
+                            <p>One-way</p>
+                            <p>Round-trip</p>
+                        </div>
+                    </div>
+                    <div id="person">
+                        <p>1 Adult, No discound card</p>
+                        <i class="fa-solid fa-chevron-down"></i>
+                        <div id="option-person">
+                            <div>
+                                <p>Adult</p>
+                                <div id="less-adult"><i class="fa-solid fa-minus"></i></div>
+                                <p id="number-adult">1</p>
+                                <div id="more-adult"><i class="fa-solid fa-plus"></i></div>
+                            </div>
+                            <div>
+                                <p>Youth</p>
+                                <div id="less-youth"><i class="fa-solid fa-minus"></i></div>
+                                <p id="number-youth">0</p>
+                                <div id="more-youth"><i class="fa-solid fa-plus"></i></div>
+                            </div>
+                            <div>
+                                <p>Senior</p>
+                                <div id="less-senior"><i class="fa-solid fa-minus"></i></div>
+                                <p id="number-senior">0</p>
+                                <div id="more-senior"><i class="fa-solid fa-plus"></i></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div>
-                    <p>Youth</p>
-                    <div id="less-youth"><i class="fa-solid fa-minus"></i></div>
-                    <p id="number-youth"></p>
-                    <div id="more-youth"><i class="fa-solid fa-plus"></i></div>
-                </div>
-                <div>
-                    <p>Senior</p>
-                    <div id="less-senior"><i class="fa-solid fa-minus"></i></div>
-                    <p id="number-senior"></p>
-                    <div id="more-senior"><i class="fa-solid fa-plus"></i></div>
-                </div>
-            </div>
-            <div>
-                <i class="fa-regular fa-circle"></i>
-                <input type="text" placeholder="From: City, Station Or Airport">
-            </div>
-            <div>
-                <i class="fa-solid fa-location-dot"></i>
-                <input type="text" placeholder="To: City, Station Or Airport">
-            </div>
-            <input type="date" value="2023-14-05" min="2023-13-05" max="2023-12-31">
-            <input type="date" value="2023-14-05" min="2023-13-05" max="2023-12-31">
-            <button type="submit">Search</button>
-        </form>
-        <div id="accomodation"><div id="accomodation-dot"></div></div>
-        <p>Find my accomodation</p>
+                <div class="advence-search">
+                    <div class="input-option">
+                        <i class="fa-regular fa-circle"></i>
+                        <input type="text" placeholder="From: City, Station Or Airport">
+                    </div>
+                    <div class="input-option">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <input type="text" placeholder="To: City, Station Or Airport">
+                    </div>
+                    <div id="date">
+                        <div>
+                            <i class="fa-regular fa-calendar"></i>
+                            <input type="date" value="2023-14-05" min="2023-13-05" max="2023-12-31">
+                        </div>
+                        <input type="date" value="2023-14-05" min="2023-13-05" max="2023-12-31">
+                    </div>
+                    <button type="submit" id="search">Search</button>
+                </div>  
+            </form>
+            <div id="accomodation"><div id="accomodation-dot"></div></div>
+            <p>Find my accomodation</p>
+        </div>
     </main>
 </body>
 </html>

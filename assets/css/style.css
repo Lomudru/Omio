@@ -1,0 +1,105 @@
+#searchBar{
+    width: 70vw;
+    margin: 2vw auto;
+    padding: 2vw;
+    box-shadow: 0 4px 8px rgba(19,41,104,.1);
+    border-radius: 8px;
+}
+#searchBar form .advence-search{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+#searchBar form .advence-search:first-of-type{
+    justify-content: left;
+    flex-direction: row;
+}
+p{
+    margin: 0;
+}
+#person, #select{
+    display: flex;
+}
+#person i, #select i{
+    margin-left: 3vw;
+}
+#option-person, #select-option{
+    display: none;
+    position: relative;
+}
+.input-option{
+    background-color: #f1f2f6;
+    border-radius: 8px;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0.5em;
+}
+.input-option input{
+    border: none;
+    background-color: transparent;
+}
+.input-option input:focus-visible{
+    outline: none;
+}
+.input-option:has(input:focus-visible){
+    border: 1px solid lightgray;
+    outline: none;
+}
+i{
+    color: #a1a9c3;
+}
+#date{
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    border-radius: 8px;
+    background-color: #f1f2f6;
+}
+#date input, #date div{
+    border: none;
+    width: 45%;
+    background-color: transparent;
+}
+#date div{
+    border-right: 1px solid lightgray;
+    padding: 0.5em;
+    border-radius: 8px 0 0 8px;
+}
+#date div input{
+    width: 85%;
+}
+#date > input{
+    padding: 0.5em 0.5em 0.5em 10%;
+}
+#date div input:focus-visible{
+    outline: none;
+}
+#date div:has(input:focus-visible){
+    outline: 1px solid lightgray;
+}
+#date > input:focus-visible{
+    outline: 1px solid lightgray;
+    border-radius: 0 8px 8px 0;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+#search{
+    background-color: #fa6b6b;
+    border: none;
+    color: white;
+    width: 90%;
+    padding: 0.5em;
+    margin: 0 auto;
+    border-radius: 8px;
+}
