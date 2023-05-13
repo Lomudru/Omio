@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omio</title>
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://kit.fontawesome.com/1f0991f3fc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <main>
+        <form action="#">
+            <select name="traject-type" id="traject-type">
+                <option value="One-way">One-way</option>
+                <option value="Round-trip">Round Trip</option>
+            </select>
+            <div>
+                <p>1 Adult, No discound card</p>
+                <div>
+                    <p>Adult</p>
+                    <div id="less-adult"><i class="fa-solid fa-minus"></i></div>
+                    <p id="number-adult"></p>
+                    <div id="more-adult"><i class="fa-solid fa-plus"></i></div>
+                </div>
+                <div>
+                    <p>Youth</p>
+                    <div id="less-youth"><i class="fa-solid fa-minus"></i></div>
+                    <p id="number-youth"></p>
+                    <div id="more-youth"><i class="fa-solid fa-plus"></i></div>
+                </div>
+                <div>
+                    <p>Senior</p>
+                    <div id="less-senior"><i class="fa-solid fa-minus"></i></div>
+                    <p id="number-senior"></p>
+                    <div id="more-senior"><i class="fa-solid fa-plus"></i></div>
+                </div>
+            </div>
+            <div>
+                <i class="fa-regular fa-circle"></i>
+                <input type="text" placeholder="From: City, Station Or Airport">
+            </div>
+            <div>
+                <i class="fa-solid fa-location-dot"></i>
+                <input type="text" placeholder="To: City, Station Or Airport">
+            </div>
+            <input type="date" value="2023-14-05" min="2023-13-05" max="2023-12-31">
+            <input type="date" value="2023-14-05" min="2023-13-05" max="2023-12-31">
+            <button type="submit">Search</button>
+        </form>
+        <div id="accomodation"><div id="accomodation-dot"></div></div>
+        <p>Find my accomodation</p>
+    </main>
+</body>
+</html>
