@@ -103,3 +103,34 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin: 0 auto;
     border-radius: 8px;
 }
+#accomodation{
+    display: inline-block;
+    width: 32px;
+    height: 18px;
+    background-color: rgb(94, 144, 204);
+    border-radius: 30px;
+    transition: 0.5s;
+}
+#accomodation-dot{
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.active{
+    margin: 2px 0 0 16px;
+}
+.disabled{
+    margin: 2px 0 0 2px;
+}
+#accomodation:has(> #accomodation-dot.disabled){
+    background-color: rgb(220, 223, 233);
+}
+#find-accomodation{
+    display: flex;
+    margin: 2vw 0 0 0;
+}
+#find-accomodation p{
+    margin-left: 1vw;
+}
