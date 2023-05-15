@@ -18,15 +18,24 @@
 p{
     margin: 0;
 }
-#person, #select{
-    display: flex;
+#select p, #select i, #person p, #person i{
+    float: left;
 }
 #person i, #select i{
     margin-left: 3vw;
 }
 #option-person, #select-option{
-    display: none;
     position: relative;
+}
+#select-option{
+    flex-direction: column;
+    top: 18px;
+}
+.show{
+    display: flex;
+}
+.hidden{
+    display: none;
 }
 .input-option{
     background-color: #f1f2f6;
@@ -52,6 +61,7 @@ i{
 #date{
     margin: 0 auto;
     width: 90%;
+    padding: 0 0.5em;
     display: flex;
     border-radius: 8px;
     background-color: #f1f2f6;
@@ -103,6 +113,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     margin: 0 auto;
     border-radius: 8px;
 }
+.input-option, #date, #search{
+    margin-top: 1vw;
+}
 #accomodation{
     display: inline-block;
     width: 32px;
@@ -133,4 +146,8 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 }
 #find-accomodation p{
     margin-left: 1vw;
+}
+
+.clear{
+    clear: both;
 }
