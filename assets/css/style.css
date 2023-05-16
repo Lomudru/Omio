@@ -77,7 +77,7 @@ i{
     border-radius: 8px 0 0 8px;
 }
 #date div input{
-    width: 85%;
+    width: 20vw;
 }
 #date > input{
     padding: 0.5em 0.5em 0.5em 10%;
@@ -91,18 +91,6 @@ i{
 #date > input:focus-visible{
     outline: 1px solid lightgray;
     border-radius: 0 8px 8px 0;
-}
-input[type="date"]::-webkit-calendar-picker-indicator {
-    background: transparent;
-    bottom: 0;
-    color: transparent;
-    cursor: pointer;
-    height: auto;
-    left: 0;
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: auto;
 }
 #search{
     background-color: #fa6b6b;

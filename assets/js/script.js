@@ -19,3 +19,7 @@ person.addEventListener("click", function () {
     optionPerson.classList.toggle("show");
     optionPerson.classList.toggle("hidden");
 })
+
+
+
+

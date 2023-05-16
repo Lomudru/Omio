@@ -24,10 +24,8 @@ $('#ToCity').on('keyup', (evt) =>{
     }
 })
 
-$('.town').on('click', (evt) =>{
-    alert("test");
-    FillCity();
-})
+
+
 
 function getTown(town, id){
     $.get(`https://api.comparatrip.eu/cities/autocomplete/?q=${town}`).then(res => {
@@ -36,11 +34,14 @@ function getTown(town, id){
         for (let i = 0; i < res.length; i++){
             let ActualTown = res[i].local_name.split(',')
             $(id).append(`
-                <p class="town" id="IdTown${i}">${ActualTown[0]}, ${ActualTown[2]}</p>
+                <p class="town"  id="IdTown${i}">${ActualTown[0]}, ${ActualTown[2]}</p>
              `)
         }
     })
 }
+$('.town').on('click', (evt) =>{
+    alert("test");
+})
 
 function getPopularTown(town, id){
     $.get(`https://api.comparatrip.eu/cities/popular/from/${town}/5`).then(res => {
@@ -57,3 +58,12 @@ function getPopularTown(town, id){
 function FillCity(id) {
 
 }
+
+
+$( function() {
+    $( "#datepickerFirst" ).datepicker();
+} );
+
+$( function() {
+    $( "#datepickerLast" ).datepicker();
+} );
