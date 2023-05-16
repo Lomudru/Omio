@@ -39,9 +39,6 @@ function getTown(town, id){
         }
     })
 }
-$('.town').on('click', (evt) =>{
-    alert("test");
-})
 
 function getPopularTown(town, id){
     $.get(`https://api.comparatrip.eu/cities/popular/from/${town}/5`).then(res => {
@@ -49,14 +46,22 @@ function getPopularTown(town, id){
         $('.town').remove();
         for (let i = 0; i < res.length; i++){
             let ActualTown = res[i].local_name.split(',')
-            $(id).append(`
-                <p class="town" id="IdTown${i}">${ActualTown[0]}, ${ActualTown[2]}</p>
-             `)
+            $(id).append(`<p class="town" id="IdTown${i}">${ActualTown[0]}, ${ActualTown[2]}</p>`)
         }
     })
 }
-function FillCity(id) {
 
+$("body").on("click", ".town", function () {
+    if (this.parentNode.id === "FirstCity"){
+        FillCity(this, "FromCity");
+    }
+    if (this.parentNode.id === "LastCity"){
+        FillCity(this, "ToCity");
+    }
+});
+
+function FillCity(caller, where) {
+    document.getElementById(where).value= caller.innerHTML;
 }
 
 
