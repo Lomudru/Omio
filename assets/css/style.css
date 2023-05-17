@@ -39,13 +39,32 @@ p{
     box-shadow: rgba(19, 41, 104, 0.2) 0 8px 16px 0;
     border-radius: 8px;
     padding: 16px;
+    width: 165px;
 }
 
-#option-person div{
+#option-person > div, #option-person > div > div {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 #person div.desc{
     display: block;
+}
+#option-person > div > div{
+    width: 70px;
+}
+.changing-number{
+    height: fit-content;
+    width: 16px;
+    border: 1px solid rgb(94, 144, 204);
+    padding: 3px;
+    border-radius: 50%;
+    justify-content: center;
+    display: flex;
+}
+.changing-number i{
+    color: rgb(94, 144, 204);
+    float: none;
 }
 .desc p:last-of-type{
     font-size: 0.7rem;
@@ -165,6 +184,12 @@ i{
 }
 .disabled{
     margin: 2px 0 0 2px;
+}
+.disabledAddPerson .changing-number:first-of-type{
+    border-color: rgb(220, 223, 233);
+}
+.disabledAddPerson .changing-number:first-of-type i{
+    color: rgb(220, 223, 233);
 }
 #accomodation:has(> #accomodation-dot.disabled){
     background-color: rgb(220, 223, 233);
