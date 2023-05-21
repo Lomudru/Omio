@@ -9,7 +9,7 @@ let optionSelected = document.getElementById("selected-option");
 let FirstCity = document.getElementById("FirstCity");
 let LastCity = document.getElementById("LastCity");
 let ChangingNumberPerson = document.querySelectorAll(".changing-number");
-let YouthAge = document.getElementById("YouthAge");
+let Age = document.querySelectorAll(".Age");
 let NumberPerson = document.querySelector("#person p");
 let Adult = document.getElementById("number-adult");
 let Youth = document.getElementById("number-youth");
@@ -74,15 +74,35 @@ for (let k = 0; k < ChangingNumberPerson.length; k++){
                             ChangingNumberPerson[k].parentNode.classList.add("disabledAddPerson");
                             YouthAge.innerHTML = "";
                         }
+                        else{
+                            let ActualYouthAge = YouthAge.innerHTML.split("<div>")
+                            let FuturYouthAge;
+                            for(let n = 0; n < ActualYouthAge.length - 1; n++){
+                                if(FuturYouthAge === undefined){
+                                    FuturYouthAge = "<div>" + ActualYouthAge[n];
+                                }
+                                else{
+                                    if(n > 1){
+                                        FuturYouthAge += "<div>" + ActualYouthAge[n];
+                                    }
+                                    else{
+                                        FuturYouthAge +=  ActualYouthAge[n];
+                                    }
+                                }
+                            }
+                            YouthAge.innerHTML = FuturYouthAge;
+                        }
+                        
                     }
                 }
                 else if (ChangingNumberPerson[k].id === "more-youth"){
-                    Youth.innerText = parseInt(Youth.innerText) + 1;
+                    let YouthNumber = parseInt(Youth.innerText) + 1;
+                    Youth.innerText = YouthNumber;
                     ChangingNumberPerson[k].parentNode.classList.remove("disabledAddPerson");
-                    YouthAge.innerHTML += "<p>Youth "+ Youth.innerText +"</p>" +
-                        "<select id='YouthSelect"+ Youth.innerText +"'><option value='' disabled selected hidden>Age</option></select>";
-                    for (let m = 0; m < 25; m++){
-                        YouthAge.querySelector("YouthSelect" + YouthAge.innerHTML +"").innerHTML += "<option>"+ m +" years</option>"
+                    YouthAge.innerHTML += "<div><hr><p>Youth "+ Youth.innerText +"</p>" +
+                        "<select id='YouthSelect"+ Youth.innerText +"'><option value='' disabled selected hidden>Age</option></select></div>";
+                    for (let m = 0; m <= 25; m++){
+                        YouthAge.querySelector("#YouthSelect" + YouthNumber +"").innerHTML += "<option>"+ m +" years</option>"
                     }
                 }
         }
@@ -92,12 +112,37 @@ for (let k = 0; k < ChangingNumberPerson.length; k++){
                         Senior.innerText = parseInt(Senior.innerText) - 1;
                         if (parseInt(Senior.innerText) === 0){
                             ChangingNumberPerson[k].parentNode.classList.add("disabledAddPerson");
+                            SeniorAge.innerHTML = "";
+                        }
+                        else{
+                            let ActualSeniorAge = SeniorAge.innerHTML.split("<div>")
+                            let FuturSeniorAge;
+                            for(let n = 0; n < ActualSeniorAge.length - 1; n++){
+                                if(FuturSeniorAge === undefined){
+                                    FuturSeniorAge = "<div>" + ActualSeniorAge[n];
+                                }
+                                else{
+                                    if(n > 1){
+                                        FuturSeniorAge += "<div>" + ActualSeniorAge[n];
+                                    }
+                                    else{
+                                        FuturSeniorAge +=  ActualSeniorAge[n];
+                                    }
+                                }
+                            }
+                            SeniorAge.innerHTML = FuturSeniorAge;
                         }
                     }
                 }
                 else if (ChangingNumberPerson[k].id === "more-senior"){
-                    Senior.innerText = parseInt(Senior.innerText) + 1;
+                    let SeniorNumber = parseInt(Senior.innerText) + 1;
+                    Senior.innerText = SeniorNumber;
                     ChangingNumberPerson[k].parentNode.classList.remove("disabledAddPerson");
+                    SeniorAge.innerHTML += "<div><hr><p>Senior "+ Senior.innerText +"</p>" +
+                        "<select id='SeniorSelect"+ Senior.innerText +"'><option value='' disabled selected hidden>Age</option></select></div>";
+                    for (let m = 0; m <= 25; m++){
+                        SeniorAge.querySelector("#SeniorSelect" + SeniorNumber +"").innerHTML += "<option>"+ m +" years</option>"
+                    }
                 }
         }
         if (parseInt(Youth.innerText) > 0 || parseInt(Senior.innerText) > 0){
@@ -113,7 +158,9 @@ for (let k = 0; k < ChangingNumberPerson.length; k++){
         }
     })
 }
-YouthAge.addEventListener("click", function () {
+for(let o = 0; o < Age.length; o ++){
+    Age[o].addEventListener("click", function () {
     optionPerson.classList.toggle("show");
     optionPerson.classList.toggle("hidden");
 })
+}

@@ -211,6 +211,30 @@ i{
 .actual i{
     color: #a1a9c3 !important;
 }
+.Age{
+    display: flex;
+    flex-direction: column;
+}
+.Age > div{
+    width: 100% !important;
+    flex-wrap: wrap;
+}
+.Age > div select{
+    background-color: #D9DEE7;
+    border: none;
+    color: rgb(66, 84, 134);
+    border-radius: 8px;
+    padding-left: 10px;
+}
+.Age > div hr{
+    flex-basis: 100%;
+}
+
+#FirstCity{
+    background-color: wheat;
+}
+
+
 
 .clear{
     clear: both;

@@ -34,7 +34,7 @@ function getTown(town, id){
         for (let i = 0; i < res.length; i++){
             let ActualTown = res[i].local_name.split(',')
             $(id).append(`
-                <p class="town"  id="IdTown${i}">${ActualTown[0]}, ${ActualTown[2]}</p>
+                <p class="town" id="IdTown${i}"><i class="fa-solid fa-location-dot"></i>${ActualTown[0]}, ${ActualTown[2]}</p>
              `)
         }
     })
