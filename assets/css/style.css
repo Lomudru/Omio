@@ -1,12 +1,21 @@
+/* The Font of all the text */
 *{
     font-family: 'Instrument Sans', sans-serif;
 }
+
+/* ================================================================= */
+/* The Separator for the select number of person */
+/* ================================================================= */
 hr{
     width: 100%;
     height: 1px;
     background-color: rgb(228, 232, 235);
     border: none;
 }
+
+/* ================================================================= */
+/* The Css global of the searchBar */
+/* ================================================================= */
 #searchBar{
     width: 70vw;
     margin: 2vw auto;
@@ -24,6 +33,10 @@ hr{
     justify-content: left;
     flex-direction: row;
 }
+
+/* ================================================================= */
+/* The Css for the 2 select */
+/* ================================================================= */
 p{
     margin: 0;
 }
@@ -159,74 +172,12 @@ i{
     outline: 1px solid lightgray;
     border-radius: 0 8px 8px 0;
 }
-#search{
-    background-color: #fa6b6b;
-    border: none;
-    color: white;
-    width: 65.7vw;
-    padding: 0.7em;
-    margin: 0 auto;
-    border-radius: 8px;
-}
 .input-option, #date, #search{
     margin-top: 1vw;
 }
-#accomodation {
-    display: inline-block;
-    width: 32px;
-    height: 18px;
-    background-color: rgb(94, 144, 204);
-    border-radius: 30px;
-    transition: 0.5s;
-}
-#option-person > #discount-card > #accomodation-card{
-    display: inline-block;
-    width: 32px;
-    height: 18px;
-    background-color: rgb(220, 223, 233);
-    border-radius: 30px;
-    margin-left: 5px;
-}
-#accomodation-dot, #accomodation-dot-card{
-    width: 14px;
-    height: 14px;
-    background-color: white;
-    border-radius: 50%;
-    transition: 0.5s;
-}
-.active{
-    margin: 2px 0 0 16px;
-}
-.disabled{
-    margin: 2px 0 0 2px;
-}
-.disabledAddPerson .changing-number:first-of-type{
-    border-color: rgb(220, 223, 233);
-}
-.disabledAddPerson .changing-number:first-of-type i{
-    color: rgb(220, 223, 233);
-}
-#accomodation:has(> #accomodation-dot.disabled){
-    background-color: rgb(220, 223, 233);
-}
-#find-accomodation{
-    display: flex;
-    margin: 20px 0 0 0;
-}
-#find-accomodation p{
-    margin-left: 10px;
-    font-size: 14px;
-}
-.relative{
-    position: relative;
-    width: 100%;
-}
-#FirstCity, #LastCity{
-    position: absolute;
-}
 .actual i{
-    color: #a1a9c3 !important;
-}
+     color: #a1a9c3 !important;
+ }
 .Age{
     display: flex;
     flex-direction: column;
@@ -272,6 +223,89 @@ i{
 }
 .advence-search input{
     width: 90%;
+}
+
+/* ================================================================= */
+/* The submit Button */
+/* ================================================================= */
+#search{
+    background-color: #fa6b6b;
+    border: none;
+    color: white;
+    width: 65.7vw;
+    padding: 0.7em;
+    margin: 0 auto;
+    border-radius: 8px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+#search:hover{
+    background-color: #fb8989;
+}
+
+/* ================================================================= */
+/* The accommodation button */
+/* ================================================================= */
+#accomodation {
+    display: inline-block;
+    width: 32px;
+    height: 18px;
+    background-color: rgb(94, 144, 204);
+    border-radius: 30px;
+    transition: 0.5s;
+}
+#option-person > #discount-card > #accomodation-card{
+    display: inline-block;
+    width: 32px;
+    height: 18px;
+    background-color: rgb(220, 223, 233);
+    border-radius: 30px;
+    margin-left: 5px;
+}
+#accomodation-dot, #accomodation-dot-card{
+    width: 14px;
+    height: 14px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+.active{
+    margin: 2px 0 0 16px;
+}
+.disabled{
+    margin: 2px 0 0 2px;
+}
+
+/* ================================================================= */
+/* The css who i use in the Js */
+/* ================================================================= */
+.disabledAddPerson .changing-number:first-of-type{
+    border-color: rgb(220, 223, 233);
+}
+.disabledAddPerson .changing-number:first-of-type i{
+    color: rgb(220, 223, 233);
+}
+#accomodation:has(> #accomodation-dot.disabled){
+    background-color: rgb(220, 223, 233);
+}
+#find-accomodation{
+    display: flex;
+    margin: 20px 0 0 0;
+}
+#find-accomodation p{
+    margin-left: 10px;
+    font-size: 14px;
+}
+.relative{
+    position: relative;
+    width: 100%;
+}
+
+/* ================================================================= */
+/* The css of th input button */
+/* ================================================================= */
+#FirstCity, #LastCity{
+    position: absolute;
 }
 .City:has(> p){
     background-color: white;

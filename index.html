@@ -16,7 +16,9 @@
     <main>
         <div id="searchBar">
             <form action="#">
+                <!-- The Sector with the 2 select -->
                 <div class="advence-search">
+                    <!-- The Select of the way -->
                     <div id="select">
                         <p id="selected-option">One-way</p>
                         <i class="fa-solid fa-chevron-down"></i>
@@ -32,11 +34,13 @@
                             </div>
                         </div>
                     </div>
+                    <!-- The Select of the number of person -->
                     <div id="person">
                         <p>1 Adult, No discound card</p>
                         <i class="fa-solid fa-chevron-down"></i>
                         <div class="clear"></div>
                         <div id="option-person" class="hidden">
+                            <!-- The number of Adults -->
                             <div>
                                 <div class="desc">
                                     <p>Adult</p>
@@ -49,6 +53,7 @@
                                 </div>
                             </div>
                             <hr>
+                            <!-- The number of Youths -->
                             <div>
                                 <div class="desc">
                                     <p>Youth</p>
@@ -62,6 +67,7 @@
                             </div>
                             <div id="YouthAge" class="Age"></div>
                             <hr>
+                            <!-- The number of Senior -->
                             <div>
                                 <div class="desc">
                                     <p>Senior</p>
@@ -75,21 +81,24 @@
                             </div>
                             <div id="SeniorAge" class="Age"></div>
                             <hr>
+                            <!-- The option of a discount card -->
                             <div id="discount-card">
                                 <i class="fa-solid fa-credit-card"></i>
                                 <p>Add discound card</p>
                                 <i class="fa-solid fa-circle-info"></i>
                                 <div id="accomodation-card"><div id="accomodation-dot-card" class="disabled"></div></div>
                             </div>
+                            <!-- The information about the discount card -->
                             <div id="exclamation">
                                 <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
                                 <p>Please select your journey before adding discount cards.</p>
                             </div>
                         </div>
-                        
                     </div>
                 </div>
+                <!-- All The input of the searchBar -->
                 <div class="advence-search">
+                    <!-- The first input to select a city -->
                     <div>
                         <div class="input-option">
                             <i class="fa-regular fa-circle"></i>
@@ -99,6 +108,7 @@
                             <div id="FirstCity" class="City"></div>
                         </div>
                     </div>
+                    <!-- The second input to select a city -->
                     <div>
                         <div class="input-option">
                             <i class="fa-solid fa-location-dot"></i>
@@ -108,6 +118,7 @@
                             <div id="LastCity" class="City"></div>
                         </div>
                     </div>
+                    <!-- The date selector -->
                     <div id="date">
                         <div>
                             <i class="fa-regular fa-calendar"></i>
@@ -115,9 +126,11 @@
                         </div>
                         <input type="text" id="datepickerLast" placeholder="+ Add Return">
                     </div>
+                    <!-- The submit button -->
                     <button type="submit" id="search">Search</button>
                 </div>  
             </form>
+            <!-- The Button to choses if we want a accommodation or not -->
             <div id="find-accomodation">
                 <div id="accomodation"><div id="accomodation-dot" class="active"></div></div>
                 <p>Find my accomodation</p>
