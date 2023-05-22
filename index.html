@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="assets/css/normalize.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans&family=Lato&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
@@ -72,30 +75,38 @@
                             </div>
                             <div id="SeniorAge" class="Age"></div>
                             <hr>
-                            <div>
+                            <div id="discount-card">
                                 <i class="fa-solid fa-credit-card"></i>
                                 <p>Add discound card</p>
-                                <i class="fa-light fa-circle-info"></i>
-                                <div id="accomodation"><div id="accomodation-dot" class="active"></div></div>
+                                <i class="fa-solid fa-circle-info"></i>
+                                <div id="accomodation-card"><div id="accomodation-dot-card" class="disabled"></div></div>
+                            </div>
+                            <div id="exclamation">
+                                <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                                <p>Please select your journey before adding discount cards.</p>
                             </div>
                         </div>
                         
                     </div>
                 </div>
                 <div class="advence-search">
-                    <div class="input-option">
-                        <i class="fa-regular fa-circle"></i>
-                        <input type="text" placeholder="From: City, Station Or Airport" id="FromCity">
+                    <div>
+                        <div class="input-option">
+                            <i class="fa-regular fa-circle"></i>
+                            <input type="text" placeholder="From: City, Station Or Airport" id="FromCity">
+                        </div>
+                        <div class="relative">
+                            <div id="FirstCity" class="City"></div>
+                        </div>
                     </div>
-                    <div class="relative">
-                        <div id="FirstCity"></div>
-                    </div>
-                    <div class="input-option">
-                        <i class="fa-solid fa-location-dot"></i>
-                        <input type="text" placeholder="To: City, Station Or Airport" id="ToCity">
-                    </div>
-                    <div class="relative">
-                        <div id="LastCity"></div>
+                    <div>
+                        <div class="input-option">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <input type="text" placeholder="To: City, Station Or Airport" id="ToCity">
+                        </div>
+                        <div class="relative">
+                            <div id="LastCity" class="City"></div>
+                        </div>
                     </div>
                     <div id="date">
                         <div>

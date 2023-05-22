@@ -46,7 +46,7 @@ function getPopularTown(town, id){
         $('.town').remove();
         for (let i = 0; i < res.length; i++){
             let ActualTown = res[i].local_name.split(',')
-            $(id).append(`<p class="town" id="IdTown${i}">${ActualTown[0]}, ${ActualTown[2]}</p>`)
+            $(id).append(`<p class="town" id="IdTown${i}"><i class="fa-solid fa-location-dot"></i>${ActualTown[0]}, ${ActualTown[2]}</p>`)
         }
     })
 }
@@ -61,7 +61,7 @@ $("body").on("click", ".town", function () {
 });
 
 function FillCity(caller, where) {
-    document.getElementById(where).value= caller.innerHTML;
+    document.getElementById(where).value = caller.innerHTML.split("</i>")[1];
 }
 
 

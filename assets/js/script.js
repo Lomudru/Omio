@@ -140,7 +140,7 @@ for (let k = 0; k < ChangingNumberPerson.length; k++){
                     ChangingNumberPerson[k].parentNode.classList.remove("disabledAddPerson");
                     SeniorAge.innerHTML += "<div><hr><p>Senior "+ Senior.innerText +"</p>" +
                         "<select id='SeniorSelect"+ Senior.innerText +"'><option value='' disabled selected hidden>Age</option></select></div>";
-                    for (let m = 0; m <= 25; m++){
+                    for (let m = 58; m <= 75; m++){
                         SeniorAge.querySelector("#SeniorSelect" + SeniorNumber +"").innerHTML += "<option>"+ m +" years</option>"
                     }
                 }
