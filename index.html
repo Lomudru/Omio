@@ -13,6 +13,111 @@
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans&family=Lato&display=swap" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#"><img src="assets/img/logo_omio.webp" alt="the logo of omio"></a><i class="fa-solid fa-bars"></i></li>
+                <li>
+                    <div>
+                        <img src="assets/img/logo_omio.webp" alt="the logo of omio">
+                        <i class="fa-solid fa-xmark"></i>
+                        <p><i class="fa-sharp fa-solid fa-coins"></i>Currency</p>
+                        <div id="currency">
+                            <p>eur<i class="fa-solid fa-euro-sign"></i></p>
+                            <p>usd<i class="fa-solid fa-dollar-sign"></i></p>
+                            <p>gbp<i class="fa-solid fa-sterling-sign"></i></p>
+                            <p>chf<i class="fa-solid fa-chf-sign"></i></p>
+                            <p>pln<span>Zł</span></p>
+                            <p>czk<span>Kč</span></p>
+                            <p>sek<span>kr</span></p>
+                            <p>cny<i class="fa-solid fa-yen-sign"></i></p>
+                            <p>aud<span>A$</span></p>
+                            <p>cad<span>CA$</span></p>
+                            <p>mxn<span>MX$</span></p>
+                            <p>dkk<span>DKK</span></p>
+                            <p>inr<i class="fa-solid fa-indian-rupee-sign"></i></p>
+                            <p>nok<span>NOK</span></p>
+                            <p>brl<span>R$</span></p>
+                            <p>jpy<i class="fa-solid fa-yen-sign"></i></p>
+                            <p>ron<span>L</span></p>
+                            <p>krw<i class="fa-solid fa-won-sign"></i></p>
+                            <p>cop<span>CO$</span></p>
+                            <p>uah<span>₴</span></p>
+                            <p>huf<span>Ft</span></p>
+                            <p>clp<span>CL$</span></p>
+                            <p>bgn<span>лв</span></p>
+                        </div>
+                        <p><i class="fa-solid fa-comments"></i>Language <img src="https://www.omio.com/gcs-proxy/static_content_repo/web/content/flags/flag-us.svg" alt="current language"></p>
+                        <div id="language">
+                            <p>English (US) <img src="https://www.omio.com/gcs-proxy/static_content_repo/web/content/flags/flag-us.svg" alt="Usa flag"></p>
+                            <p>Čeština <img src="https://www.omio.com/gcs-proxy/static_content_repo/web/content/flags/flag-cz.svg" alt="Czech flag"></p>
+                            <p>Dansk <img src="https://www.omio.com/gcs-proxy/static_content_repo/web/content/flags/flag-dk.svg" alt="Denmark flag"></p>
+                            <p>Deutsch <img src="https://www.omio.com/gcs-proxy/static_content_repo/web/content/flags/flag-de.svg" alt="Deutsch flag"></p>
+                            <p>English (UK) <img src="https://www.omio.com/gcs-proxy/static_content_repo/web/content/flags/flag-uk.svg" alt="Uk flag"></p>
+                            <p>Español <img src="https://www.omio.com/gcs-proxy/static_content_repo/web/content/flags/flag-es.svg" alt="Spanish flag"></p>
+                            <p>Suomi <img src="https://www.omio.com/gcs-proxy/static_content_repo/web/content/flags/flag-fi.svg" alt="Finland flag"></p>
+                            <p>Français <img src="https://www.omio.com/gcs-proxy/static_content_repo/web/content/flags/flag-fr.svg" alt="French flag"></p>
+                            <p>Magyar <img src="https://www.omio.com/gcs-proxy/static_content_repo/web/content/flags/flag-hu.svg" alt="Hungarian flag"></p>
+                            <p>Italiano <img src="https://www.omio.com/gcs-proxy/static_content_repo/web/content/flags/flag-it.svg" alt="Italian flag"></p>
+                            <p>日本語 <img src="https://www.omio.com/gcs-proxy/static_content_repo/web/content/flags/flag-ja.svg" alt="Japanese flag"></p>
+                            <p>한국어 <img src="https://www.omio.com/gcs-proxy/static_content_repo/web/content/flags/flag-ko.svg" alt="Korean flag"></p>
+                            <p>Norsk <img src="https://www.omio.com/gcs-proxy/static_content_repo/web/content/flags/flag-no.svg" alt="Norwegian flag"></p>
+                            <p>Nederlands <img src="https://www.omio.com/gcs-proxy/static_content_repo/web/content/flags/flag-nl.svg" alt="Netherlander flag"></p>
+                            <p>Polski <img src="https://www.omio.com/gcs-proxy/static_content_repo/web/content/flags/flag-pl.svg" alt="Polish flag"></p>
+                            <p>Português <img src="https://www.omio.com/gcs-proxy/static_content_repo/web/content/flags/flag-pt.svg" alt="Portuguese flag"></p>
+                            <p>Русский <img src="https://www.omio.com/gcs-proxy/static_content_repo/web/content/flags/flag-ru.svg" alt="Russia flag"></p>
+                            <p>Svenska <img src="https://www.omio.com/gcs-proxy/static_content_repo/web/content/flags/flag-se.svg" alt="Swedish flag"></p>
+                            <p>Türkçe <img src="https://www.omio.com/gcs-proxy/static_content_repo/web/content/flags/flag-tr.svg" alt="Türkiye flag"></p>
+                            <p>Українська <img src="https://www.omio.com/gcs-proxy/static_content_repo/web/content/flags/flag-ua.svg" alt="Ukraine flag"></p>
+                            <p>中文 <img src="https://www.omio.com/gcs-proxy/static_content_repo/web/content/flags/flag-cn.svg" alt="Chinese flag"></p>
+                        </div>
+                        <a href="https://www.omio.com/app/your-bookings/retrieve?locale=en"><i class="fa-solid fa-ticket"></i>Your booking</a>
+                        <p>usefull links</p>
+                        <i class="fa-solid fa-train"></i>
+                        <select name="Trains">
+                            <option value='' disabled selected hidden>Trains</option>
+                            <option value="Night">Night trains</option>
+                            <option value="German">Trains in Germany</option>
+                            <option value="France">Trains in France</option>
+                            <option value="Spain">Trains in Spain</option>
+                            <option value="Uk">Trains in the Uk</option>
+                            <option value="Italy">Trains in Italy</option>
+                        </select>
+                        <i class="fa-solid fa-bus"></i>
+                        <select name="Buses">
+                            <option value='' disabled selected hidden>Buses</option>
+                            <option value="German">Buses in Germany</option>
+                            <option value="France">Buses in France</option>
+                            <option value="Spain">Buses in Spain</option>
+                            <option value="Uk">Buses in the Uk</option>
+                            <option value="Italy">Buses in Italy</option>
+                        </select>
+                        <i class="fa-solid fa-plane"></i>
+                        <select name="Flight">
+                            <option value='' disabled selected hidden>Flight</option>
+                            <option value="Cancel">Flight Cancellations</option>
+                            <option value="France">Flight in France</option>
+                            <option value="Poland">Flight in Poland</option>
+                            <option value="Uk">Flight in the Uk</option>
+                            <option value="German">Flight in Germany</option>
+                            <option value="Canada">Flight in Canada</option>
+                            <option value="Poland">Flight in Poland</option>
+                        </select>
+                        <i class="fa-solid fa-ship"></i>
+                        <select name="Ferries">
+                            <option value='' disabled selected hidden>Ferries</option>
+                            <option value="Fred">Fred Olsen Express</option>
+                            <option value="Toremar">Toremar</option>
+                            <option value="SNAV">SNAV</option>
+                            <option value="Moby">Moby Lines</option>
+                            <option value="Trasmapi">Trasmapi</option>
+                        </select>
+                        <button type="submit" class="search">Search</button>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </header>
     <main>
         <div id="searchBar">
             <form action="#">
