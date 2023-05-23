@@ -22,6 +22,9 @@ hr{
     padding: 2vw;
     box-shadow: 0 4px 8px rgba(19,41,104,.1);
     border-radius: 8px;
+    background-color: white;
+    position: relative;
+    top: -50px;
 }
 #searchBar form .advence-search{
     display: flex;
@@ -113,6 +116,7 @@ p{
 }
 .hidden{
     display: none;
+    background-color: transparent;
 }
 div:has(> .input-option){
     width: 95%;
@@ -234,7 +238,7 @@ i{
     color: white;
     width: 65.7vw;
     padding: 0.7em;
-    margin: 0 auto;
+    margin: 5px auto;
     border-radius: 8px;
     transition: 0.5s;
     cursor: pointer;
@@ -330,8 +334,146 @@ i{
 .clear{
     clear: both;
 }
-
-
+/* ================================================================= */
+/* The css of the header */
+/* ================================================================= */
+header{
+    background-image: url(../img/front_page_background.jpg);
+    background-position: 75%;
+    background-size: cover;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style-type: none;
+}
+li:first-of-type, li:last-of-type > div > div:first-of-type{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+li:first-of-type i, li:last-of-type > div > div:first-of-type i{
+    color: white;
+    font-size: 1.3rem;
+}
+li:first-of-type img, li:last-of-type > div > div:first-of-type img{
+    width: 82px;
+}
+h1,h2{
+    margin: 0 16px;
+    color: white;
+}
+h1{
+    margin-top: 40px;
+    font-size: 24px;
+}
+h2{
+    font-size: 18px;
+    margin-bottom: 90px;
+    display: inline-block;
+}
+li:last-of-type{
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    height: 100vh;
+    width: 100vw;
+    overflow: scroll;
+}
+li:last-of-type > div > div:first-of-type i{
+    color: #717FA4;
+}
+li:last-of-type div > p , li:last-of-type div > a{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 16px;
+    padding: 20px 0;
+}
+li:last-of-type img{
+    width: 24px;
+}
+li:last-of-type a, li:last-of-type p, li:last-of-type select{
+    text-decoration: none;
+    color: #425486;
+}
+li:last-of-type p.currencyButton span:last-of-type{
+    text-transform: uppercase;
+    color: #5e90cc;
+    font-weight: bold;
+}
+li:last-of-type p span:first-of-type i, li:last-of-type a span:first-of-type i{
+    margin-right: 15px;
+}
+li:last-of-type p.currencyButton span:last-of-type i, li:last-of-type p.languageButton span:last-of-type i{
+    margin-left: 15px;
+}
+li:last-of-type hr{
+    margin: 0;
+}
+li:last-of-type #links{
+    margin: 0;
+    background-color: #F1F2F6;
+    padding: 10px 0 5px 16px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #a1a9c3;
+}
+li:last-of-type i{
+    color: #425486;
+}
+li:last-of-type .transport{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 16px;
+}
+li:last-of-type .transport select{
+    width: 100%;
+    border: none;
+    padding: 20px 0;
+}
+#sign{
+    display: block;
+    background-color: #fa6b6b;
+    border: none;
+    color: white;
+    width: 95%;
+    padding: 0.7em;
+    margin: 5px auto;
+    border-radius: 8px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+#sign:hover{
+    background-color: #fb8989;
+}
+#currency, #language{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    overflow: scroll;
+}
+#currency p{
+    text-transform: uppercase;
+}
+#currency p:first-of-type,#language p:first-of-type{
+    margin-right: 45%;
+}
+#currency p i, #currency p span, #language p i, #language p span{
+    color: #425486;
+}
+.desktop{
+    display: none;
+}
+/* ================================================================= */
+/* The responsive */
+/* ================================================================= */
 @media screen and (min-width: 768px) and (max-width: 768px)  {
     #searchBar{
         width: 715px;
@@ -385,6 +527,11 @@ i{
         display: flex;
         overflow: hidden;
     }
+    li:first-of-type{
+        width: 705px;
+        padding: 16px 0;
+        margin: 0 auto;
+    }
 }
 @media screen and (min-width: 1024px) {
     #searchBar{
@@ -414,5 +561,103 @@ i{
     #date div{
         display: flex;
         overflow: hidden;
+    }
+    ul{
+        width: 950px;
+        margin: 0 auto 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    li:first-of-type{
+        width: fit-content;
+    }
+    h1, h2{
+        margin: 0 auto;
+        width: 950px;
+        padding: 0 16px;
+        display: block;
+    }
+    h1{
+        font-size: 40px;
+    }
+    h2{
+        font-size: 24px;
+    }
+    header{
+        padding-bottom: 90px;
+    }
+    .desktop{
+        display: block;
+    }
+    .mobile{
+        display: none !important;
+    }
+    select {
+        appearance: none;
+        background-color: transparent;
+        border: none;
+        padding: 0 1em 0 0;
+        margin: 0;
+        width: 70px;
+        font-family: inherit;
+        font-size: inherit;
+        cursor: inherit;
+        line-height: inherit;
+        color: white;
+    }
+    select:focus-visible{
+        outline: none;
+    }
+    select option{
+        color: black;
+    }
+    .desktop img{
+        width: 14px;
+        display: inline-block;
+    }
+    .desktop a{
+        text-decoration: none;
+        color: white;
+    }
+    .desktop p{
+        display: flex;
+        color: white;
+        justify-content: space-between;
+        width: 45px;
+    }
+    .desktop p i{
+        color: white;
+    }
+    #currencyDesktop, #languageDesktop{
+        position: absolute;
+        z-index: 3;
+        background-color: white;
+        width: 320px;
+        height: 320px;
+        overflow: scroll;
+        border-radius: 8px;
+        margin: 0;
+        padding-top: 15px;
+    }
+    #currencyDesktop::-webkit-scrollbar, #languageDesktop::-webkit-scrollbar{
+        width: 0px;
+    }
+    #currencyDesktop p, #currencyDesktop i, #languageDesktop p, #languageDesktop i{
+        color: #425486;
+    }
+    #currencyDesktop p,#languageDesktop p{
+        text-transform: uppercase;
+        width: auto;
+        padding: 10px 15px;
+    }
+    #currencyDesktop p:hover, #languageDesktop p:hover{
+        background-color: #f1f2f6;
+    }
+    #currencyDesktop p span:first-of-type, #languageDesktop p span:first-of-type{
+        margin-left: 15px;
+    }
+    #currencyDesktop p span:first-of-type:has(i), #languageDesktop p span:first-of-type:has(i){
+        margin-left: 0;
     }
 }

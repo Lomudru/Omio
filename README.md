@@ -6,7 +6,8 @@ This project is for a candidacy at TicTacTrip
 
 ## How many time it took me to do it ?
 
-I made the search bar in 6 days but i got a lot of difficulties dues at the fact i don't know ReactJs.
+I made the search bar in 6 days but i got a lot of difficulties dues at the fact i don't know ReactJs.  
+The last day i made the header and i didn't get big issues with it.
 
 ### My issue :
 

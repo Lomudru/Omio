@@ -15,6 +15,20 @@ let NumberPerson = document.querySelector("#person p");
 let Adult = document.getElementById("number-adult");
 let Youth = document.getElementById("number-youth");
 let Senior = document.getElementById("number-senior");
+let ButtonMenuBurger = document.querySelectorAll(".ButtonMenuBurger");
+let MenuBurger = document.querySelector("li:last-of-type");
+let ButtonCurrency = document.querySelectorAll(".currencyButton");
+let DivCurrency = document.getElementById("currency");
+let AllCurrencyOption = document.querySelectorAll("#currency p");
+let ButtonLanguage = document.querySelectorAll(".languageButton");
+let DivLanguage = document.getElementById("language");
+let AllLanguageOption = document.querySelectorAll("#language p");
+let DesktopCurrencyButton = document.getElementById("currentDesktopButton");
+let DesktopCurrency = document.getElementById("currencyDesktop");
+let DesktopLanguageButton = document.getElementById("languageDesktopButton");
+let DesktopLanguage = document.getElementById("languageDesktop");
+let AllDesktopCurrencyOption = document.querySelectorAll("#currencyDesktop p");
+let AllDesktopLanguageOption = document.querySelectorAll("#languageDesktop p");
 let CanHideWay = false;
 let WayClicked = false;
 let CanHidePerson = false;
@@ -78,7 +92,6 @@ document.addEventListener("click", function () {
         optionPerson.classList.toggle("show");
         optionPerson.classList.toggle("hidden");
     }
-
 })
 
 // The JS for the number of person selector to make it work correctly
@@ -193,3 +206,80 @@ for (let o = 0; o < Age.length; o++) {
         optionPerson.classList.toggle("hidden");
     })
 }
+
+
+// ====================================================
+// The JS for the menu burger of the header
+// ====================================================
+
+// for the mobile version
+
+for (let p = 0; p < ButtonMenuBurger.length; p++){
+    ButtonMenuBurger[p].addEventListener("click", function () {
+        MenuBurger.classList.toggle("hidden");
+    })
+}
+for (let q = 0; q < ButtonCurrency.length; q++){
+    ButtonCurrency[q].addEventListener("click", function () {
+        DivCurrency.classList.toggle("hidden");
+    })
+}
+for (let r = 0; r < ButtonLanguage.length; r++){
+    ButtonLanguage[r].addEventListener("click", function () {
+        DivLanguage.classList.toggle("hidden");
+    })
+}
+for (let s = 1; s < AllCurrencyOption.length; s++){
+    AllCurrencyOption[s].addEventListener("click", function () {
+        DivCurrency.classList.toggle("hidden");
+        ButtonCurrency[0].querySelector("span:last-of-type span").innerText = AllCurrencyOption[s].innerText.substring(0, 3);
+        for (let u = 1; u < AllCurrencyOption.length; u++){
+            AllCurrencyOption[u].querySelector("span:first-of-type").innerHTML =  AllCurrencyOption[u].innerText.substring(0, 3);
+        }
+        AllCurrencyOption[s].querySelector("span:first-of-type").innerHTML = "<i class=\"fa-solid fa-check\"></i>" + AllCurrencyOption[s].innerText.substring(0, 3);
+    })
+}
+for (let t = 1; t < AllLanguageOption.length; t++){
+    AllLanguageOption[t].addEventListener("click", function () {
+        DivLanguage.classList.toggle("hidden");
+        for (let v = 1; v < AllLanguageOption.length; v++){
+            AllLanguageOption[v].querySelector("span:first-of-type").innerHTML = AllLanguageOption[v].querySelector("span:first-of-type").innerText
+        }
+        ButtonLanguage[0].querySelector("img").src = AllLanguageOption[t].querySelector("img").src;
+        AllLanguageOption[t].querySelector("span:first-of-type").innerHTML = "<i class=\"fa-solid fa-check\"></i>" + AllLanguageOption[t].querySelector("span:first-of-type").innerText
+    })
+}
+
+// For the desktop version
+
+DesktopCurrencyButton.addEventListener("click", function () {
+    DesktopCurrency.classList.toggle("hidden");
+})
+
+DesktopLanguageButton.addEventListener("click", function () {
+    DesktopLanguage.classList.toggle("hidden");
+})
+
+for (let w = 0; w < AllDesktopCurrencyOption.length; w++){
+    AllDesktopCurrencyOption[w].addEventListener("click", function () {
+        DesktopCurrency.classList.toggle("hidden");
+        console.log(AllDesktopCurrencyOption[w].querySelector("span:last-of-type").innerHTML);
+        DesktopCurrencyButton.innerHTML = AllDesktopCurrencyOption[w].querySelector("span:last-of-type").innerHTML + "<i class=\"fa-solid fa-chevron-down\"></i>";
+        for (let y = 0; y < AllDesktopCurrencyOption.length; y++){
+            AllDesktopCurrencyOption[y].querySelector("span:first-of-type").innerHTML =  AllDesktopCurrencyOption[y].innerText.substring(0, 3);
+        }
+        AllDesktopCurrencyOption[w].querySelector("span:first-of-type").innerHTML = "<i class=\"fa-solid fa-check\"></i>" + AllDesktopCurrencyOption[w].innerText.substring(0, 3);
+    })
+}
+for (let z = 0; z < AllDesktopLanguageOption.length; z++){
+    AllDesktopLanguageOption[z].addEventListener("click", function () {
+        DesktopLanguage.classList.toggle("hidden");
+        for (let x = 0; x < AllDesktopLanguageOption.length; x++){
+            AllDesktopLanguageOption[x].querySelector("span:first-of-type").innerHTML = AllDesktopLanguageOption[x].querySelector("span:first-of-type").innerText
+        }
+        DesktopLanguageButton.querySelector("img").src = AllDesktopLanguageOption[z].querySelector("img").src;
+        AllDesktopLanguageOption[z].querySelector("span:first-of-type").innerHTML = "<i class=\"fa-solid fa-check\"></i>" + AllDesktopLanguageOption[z].querySelector("span:first-of-type").innerText
+    })
+}
+
+
