@@ -33,6 +33,8 @@ let CanHideWay = false;
 let WayClicked = false;
 let CanHidePerson = false;
 let PersonClicked = false;
+let DesktopCurrencyHide = false;
+let DesktopLanguageHide = false;
 
 // ====================================================
 // The JS to disable the accommodation button
@@ -254,14 +256,21 @@ for (let t = 1; t < AllLanguageOption.length; t++){
 
 DesktopCurrencyButton.addEventListener("click", function () {
     DesktopCurrency.classList.toggle("hidden");
+    setTimeout(function () {
+        DesktopCurrencyHide = true;
+    },1)
 })
 
 DesktopLanguageButton.addEventListener("click", function () {
     DesktopLanguage.classList.toggle("hidden");
+    setTimeout(function () {
+        DesktopLanguageHide = true;
+    },1)
 })
 
 for (let w = 0; w < AllDesktopCurrencyOption.length; w++){
     AllDesktopCurrencyOption[w].addEventListener("click", function () {
+        DesktopCurrencyHide = false;
         DesktopCurrency.classList.toggle("hidden");
         console.log(AllDesktopCurrencyOption[w].querySelector("span:last-of-type").innerHTML);
         DesktopCurrencyButton.innerHTML = AllDesktopCurrencyOption[w].querySelector("span:last-of-type").innerHTML + "<i class=\"fa-solid fa-chevron-down\"></i>";
@@ -273,6 +282,7 @@ for (let w = 0; w < AllDesktopCurrencyOption.length; w++){
 }
 for (let z = 0; z < AllDesktopLanguageOption.length; z++){
     AllDesktopLanguageOption[z].addEventListener("click", function () {
+        DesktopLanguageHide = false;
         DesktopLanguage.classList.toggle("hidden");
         for (let x = 0; x < AllDesktopLanguageOption.length; x++){
             AllDesktopLanguageOption[x].querySelector("span:first-of-type").innerHTML = AllDesktopLanguageOption[x].querySelector("span:first-of-type").innerText
@@ -282,4 +292,18 @@ for (let z = 0; z < AllDesktopLanguageOption.length; z++){
     })
 }
 
+document.addEventListener("click", function () {
+    if (DesktopCurrencyHide && DesktopCurrency.classList.value !== "hidden"){
+        DesktopCurrency.classList.toggle("hidden");
+        DesktopCurrencyHide = false;
+    }
+    else if (DesktopLanguageHide && DesktopLanguage.classList.value !== "hidden"){
+        DesktopLanguage.classList.toggle("hidden");
+        DesktopLanguageHide = false;
+    }
+    else {
+        DesktopCurrencyHide = false;
+        DesktopLanguageHide = false;
+    }
+})
 

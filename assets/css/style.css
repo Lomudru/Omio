@@ -549,6 +549,9 @@ li:last-of-type .transport select{
     div:has(> .input-option){
         margin: 0;
     }
+    .City::-webkit-scrollbar{
+        width: 0px;
+    }
     #date, #search{
         margin: 1vw 0 0 0;
     }
